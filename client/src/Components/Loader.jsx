@@ -8,4 +8,5 @@ export default function Loader() {
     </div>
   );
 }
-// This code defines a simple loader component that displays a spinning animation and a message indicating that images are being scraped. The loader is styled using Tailwind CSS classes for a modern look.
+// This code defines a simple loader component that displays a spinning animation and a message indicating that images are being scraped.
+//  The loader is styled using Tailwind CSS classes for a modern look.

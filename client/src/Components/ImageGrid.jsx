@@ -1,7 +1,8 @@
 import React from 'react';
-import '../App.css'; // <-- Make sure this file exists and is imported
+import '../App.css'; 
 
 export default function ImageGrid({ images }) {
+  // Show message if there are no images
   if (!images || images.length === 0) {
     return <p className="no-images">No images found.</p>;
   }
@@ -9,6 +10,7 @@ export default function ImageGrid({ images }) {
   return (
     <div className="image-grid-wrapper">
       <div className="image-grid">
+        {/* Loop through image URLs and render each image */}
         {images.map((imgUrl, index) => (
           <div
             key={index}
@@ -19,6 +21,7 @@ export default function ImageGrid({ images }) {
               alt={`Scraped image ${index + 1}`}
               className="image"
               loading="lazy"
+              // Fallback if image fails to load
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = 'https://via.placeholder.com/300?text=Image+Not+Found';
